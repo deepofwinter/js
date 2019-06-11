@@ -1,32 +1,19 @@
-$('#banner_left').text().split('\n')[2].trim();
-$("#cont").prepend('&nbsp;&nbsp;<input type="checkbox" name="items" id="ckbJumpYzm" />跳过验证码');
-$("#cont").prepend("<button type='button' onclick='btnSplit_Onclick()'>确      定</button>");
-$("#cont").prepend("<textarea cols='80' rows='10' id='infos' />");
+if($('#banner_left').text().split('\n')[2].trim() == '聊城捷弘物流有限公司(371523198509130020)') {
+	$("#cont").prepend('&nbsp;&nbsp;<input type="checkbox" name="items" id="ckbJumpYzm" />跳过验证码');
+	$("#cont").prepend("<button type='button' onclick='btnSplit_Onclick()'>确      定</button>");
+	$("#cont").prepend("<textarea cols='80' rows='10' id='infos' />");
 
-// 修改添加车辆按钮点击事件
-$(".grid3>a").unbind("click");
-$(".grid3>a").click(addTextBox);
+	// 修改添加车辆按钮点击事件
+	$(".grid3>a").unbind("click");
+	$(".grid3>a").click(addTextBox);
 
-// 修改添加车辆按钮点击事件
-$("#js").unbind("click");
-$("#js").click(onpost_plugin);
+	// 修改添加车辆按钮点击事件
+	$("#js").unbind("click");
+	$("#js").click(onpost_plugin);
 
-// 我要乘运
-onPost();
-
-/*
-鲁P22201	20	13863050011	513436200006049719	2019-06-11	3
-鲁P22202	20	13863050011	513436200006049719	2019-06-11	4
-鲁P22203	20	13863050011	513436200006049719	2019-06-11	5
-鲁P22204	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22205	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22206	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22207	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22208	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22209	20	13863050011	513436200006049719	2019-06-11	12
-鲁P22210	20	13863050011	513436200006049719	2019-06-11	2
-
-*/
+	// 我要乘运
+	onPost();
+}
 
 // 确定按钮
 function btnSplit_Onclick(){
