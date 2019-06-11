@@ -1,8 +1,15 @@
 $('#banner_left').text().split('\n')[2].trim();
-
 $("#cont").prepend('&nbsp;&nbsp;<input type="checkbox" name="items" id="ckbJumpYzm" />跳过验证码');
 $("#cont").prepend("<button type='button' onclick='btnSplit_Onclick()'>确      定</button>");
 $("#cont").prepend("<textarea cols='80' rows='10' id='infos' />");
+
+// 修改添加车辆按钮点击事件
+$(".grid3>a").unbind("click");
+$(".grid3>a").click(addTextBox);
+
+// 修改添加车辆按钮点击事件
+$("#js").unbind("click");
+$("#js").click(onpost_plugin);
 
 // 我要乘运
 onPost();
@@ -202,12 +209,6 @@ function removeTextBox(o) {
 	document.getElementById(id).removeChild(o.parentNode);
 }
 
-// 修改添加车辆按钮点击事件
-$(".grid3>a").unbind("click");
-$(".grid3>a").click(function () {
-				addTextBox();
-            });
-
 // 提交事件
 function onpost_plugin(){
 	// 不跳过验证码, 直接调用原来的
@@ -405,7 +406,3 @@ function onpost_plugin(){
 	 }
 	}
 }
-
-// 修改添加车辆按钮点击事件
-$("#js").unbind("click");
-$("#js").click(onpost_plugin);
