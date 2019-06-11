@@ -1,4 +1,4 @@
-if($('#banner_left').text().split('\n')[2].trim() == '聊城捷弘物流有限公司(371523198509130020)') {
+if($('#banner_left').text().split('\n')[2].trim() == '聊城捷弘物流有限公司(371523198509130020)1') {
 	$("#cont").prepend('&nbsp;&nbsp;<input type="checkbox" name="items" id="ckbJumpYzm" />跳过验证码');
 	$("#cont").prepend("<button type='button' onclick='btnSplit_Onclick()'>确      定</button>");
 	$("#cont").prepend("<textarea cols='80' rows='10' id='infos' />");
